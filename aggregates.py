@@ -12,7 +12,9 @@ r"""
 
 
 Program that performs different analyses to aggregates contained in a system. It takes as main
-input files the file to detect the topology a .gro and as trajectory .xtc, .trr or .gro.
+input files the file to detect the topology a .gro and as trajectory .xtc, .trr or .gro. Here 4
+files are generated in the execution directory: angles_pairs.dat, cluster_resid.dat, clusters.dat
+and nclusters.dat.
 
 
 """
