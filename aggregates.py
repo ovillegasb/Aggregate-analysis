@@ -11,12 +11,8 @@ r"""
  /_/    \_\\______| \_____||_|  \_\|______|\_____|/_/    \_\|_|   |______||_____/
 
 
-
-This program export a Gromacs configuration from a centered trajectory to an
-input file for a QM calculation. Use the following command in order to get a
-centered GROMACS trajectory from the traj_comp.xtc file.
-
-    gmx trjconv -pbc mol -center -ur compact -s run.tpr -f traj_comp.xtc -o trajout.xtc
+Program that performs different analyses to aggregates contained in a system. It takes as main
+input files the file to detect the topology a .gro and as trajectory .xtc, .trr or .gro.
 
 
 """
@@ -486,8 +482,8 @@ def angle_btw_flats(trajectory, imodel, jmodel, frame):
     L = box[0]
 
     # 1. selecting aromatic carbon.
-    C_ar_i = trajectory.top.select(f"resid {imodel} and name C")
-    C_ar_j = trajectory.top.select(f"resid {jmodel} and name C")
+    C_ar_i = trajectory.top.select(f"resid {imodel} and element C")
+    C_ar_j = trajectory.top.select(f"resid {jmodel} and element C")
 
     # Selection coordinates
     coord_i = trajectory.xyz[frame][C_ar_i]
