@@ -846,7 +846,7 @@ if __name__ == "__main__":
     # this is a crucial point to reduce computational cost
     n_models = args["nmodels"]
     models_ndx = np.array(
-        [trajectory.top.select(f"resid {ires} and not name H") for ires in range(n_models)]
+        [trajectory.top.select(f"resid {ires} and not element H") for ires in range(n_models)]
     )
 
     # compute clusters data
