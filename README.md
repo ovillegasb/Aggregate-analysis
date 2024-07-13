@@ -6,3 +6,8 @@ Tools and routines implemented in Python to analyze aggregates in systems genera
 
 ## `aggregate.py`
 
+Example:
+
+```
+python aggregates.py -f traj_comp.xtc -s confout.gro -i 5 -r 0.35 -n 1 -nmol 10
+```
