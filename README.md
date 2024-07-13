@@ -9,5 +9,14 @@ Tools and routines implemented in Python to analyze aggregates in systems genera
 Example:
 
 ```
-python aggregates.py -f traj_comp.xtc -s confout.gro -i 5 -r 0.35 -n 1 -nmol 10
+python aggregates.py -s confout.gro -f traj_comp.xtc -i 5 -r 0.35 -n 1 -nmol 10
 ```
+
+## `frame.py`
+
+Example:
+
+```
+python frames.py -s confout.gro -f traj_comp.xtc -n 20
+```
+
