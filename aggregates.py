@@ -845,9 +845,10 @@ if __name__ == "__main__":
     # make index for models
     # this is a crucial point to reduce computational cost
     n_models = args["nmodels"]
-    models_ndx = np.array(
-        [trajectory.top.select(f"resid {ires} and not element H") for ires in range(n_models)]
-    )
+
+    models_ndx = []
+    for ires in range(n_models):
+        models_ndx.append(trajectory.top.select(f"resid {ires} and not element H"))
 
     # compute clusters data
     clusters, angles_pairs = get_clusters(trajectory, models_ndx, **args)
